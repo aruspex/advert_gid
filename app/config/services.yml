@@ -4,6 +4,8 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  app.query_parameter_listener:
+    class: AppBundle\EventListener\QueryParameterListener
+    arguments: [ "@router" ]
+    tags:
+      - { name: kernel.event_listener, event: kernel.request }
