@@ -10,6 +10,18 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
+     * @Route("/", name="main")
+     */
+    public function helloAction(Request $request)
+    {
+        $hobbies = $this->getDoctrine()
+            ->getRepository('AppBundle:Hobby')
+            ->findAll();
+
+        return $this->render('app/main.html.twig', array('hobbies' => $hobbies));
+    }
+
+    /**
      * @Route("/event-dispatcher", name="event-dispatcher")
      */
     public function eventDispatcherAction(Request $request)
