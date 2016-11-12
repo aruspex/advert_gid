@@ -1,5 +1,9 @@
-<ul>
-{% for hobby in hobbies %}
-    <li>{{ hobby.name }}</li>
-{% endfor %}
-</ul>
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <ul>
+    {% for hobby in hobbies %}
+        <li>{{ hobby.name }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
