@@ -18,9 +18,9 @@ user-hobbies:
 
 
 users:
-  path: /users
+  path: /admin/users
   defaults: { _controller: AppBundle:Admin:users }
 
 hobby-users:
-  path: /hobby/{hobbyName}
+  path: /admin/hobby/{hobbyName}
   defaults: { _controller: AppBundle:Admin:displayHobbyUsers }
