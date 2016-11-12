@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h3>Users with '{{ hobby.name }}' hobby:</h3>
+    <ul>
+    {% for user in hobby.users %}
+        <li>{{ user.username }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

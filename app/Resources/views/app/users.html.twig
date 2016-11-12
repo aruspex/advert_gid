@@ -8,7 +8,7 @@
             {{ user.username }}
             <ul>
                 {% for hobby in user.hobbies %}
-                    <li>{{ hobby.name }}</li>
+                    <li><a href="{{ path('hobby-users', {'hobbyName': hobby.name }) }}">{{ hobby.name }}</a></li>
                 {% endfor %}
             </ul>
         </li>

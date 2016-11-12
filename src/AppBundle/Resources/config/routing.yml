@@ -20,3 +20,7 @@ user-hobbies:
 users:
   path: /users
   defaults: { _controller: AppBundle:Admin:users }
+
+hobby-users:
+  path: /hobby/{hobbyName}
+  defaults: { _controller: AppBundle:Admin:displayHobbyUsers }
