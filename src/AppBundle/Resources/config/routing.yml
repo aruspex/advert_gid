@@ -15,3 +15,8 @@ main:
 user-hobbies:
   path: /user/hobbies
   defaults: { _controller: AppBundle:User:userHobbies }
+
+
+users:
+  path: /users
+  defaults: { _controller: AppBundle:Admin:users }
