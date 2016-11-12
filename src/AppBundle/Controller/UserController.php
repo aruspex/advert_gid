@@ -2,14 +2,10 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class UserController extends Controller
 {
-    /**
-     * @Route("/", name="main")
-     */
     public function mainAction()
     {
         $hobbies = $this->getDoctrine()
@@ -19,9 +15,6 @@ class DefaultController extends Controller
         return $this->render('app/main.html.twig', array('hobbies' => $hobbies));
     }
 
-    /**
-     * @Route("/user/hobbies", name="user-hobbies")
-     */
     public function userHobbiesAction()
     {
         $hobbies = $this->getUser()->getHobbies();

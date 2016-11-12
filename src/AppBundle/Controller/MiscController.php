@@ -2,15 +2,11 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class MiscController
 {
-    /**
-     * @Route("/event-dispatcher", name="event-dispatcher")
-     */
     public function eventDispatcherAction(Request $request)
     {
         $flashBag = $request->getSession()->getFlashBag();

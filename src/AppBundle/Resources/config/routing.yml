@@ -1,0 +1,17 @@
+login:
+  path: /login
+  defaults: { _controller: AppBundle:Security:login }
+
+
+event-dispatcher:
+  path: /event-dispatcher
+  defaults: { _controller: AppBundle:Misc:eventDispatcher }
+
+
+main:
+  path: /
+  defaults: { _controller: AppBundle:User:main }
+
+user-hobbies:
+  path: /user/hobbies
+  defaults: { _controller: AppBundle:User:userHobbies }
